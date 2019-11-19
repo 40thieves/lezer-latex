@@ -8,6 +8,7 @@
   },
   "devDependencies": {},
   "scripts": {
+    "build": "mkdir -p dist && lezer-generator src/latex.grammar -o dist/latex.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
