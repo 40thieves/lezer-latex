@@ -6,7 +6,9 @@
   "dependencies": {
     "lezer-generator": "^0.5.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^6.2.2"
+  },
   "scripts": {
     "build": "mkdir -p dist && lezer-generator src/latex.grammar -o dist/latex.js",
     "test": "echo \"Error: no test specified\" && exit 1"
