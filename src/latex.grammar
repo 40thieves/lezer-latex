@@ -1,0 +1,11 @@
+@top[name=LaTeX] { expression }
+
+expression { text | Command }
+
+Command { "\\" text Arguments }
+
+Arguments { "{" text "}" }
+
+@tokens {
+  text { std.asciiLetter+ }
+}
