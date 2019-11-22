@@ -1,10 +1,14 @@
 @top[name=LaTeX] { expression }
 
-expression { text | Command }
+expression { text | Command | Math }
 
-Command { "\\" text Arguments }
+Command { "\\" text Options? Arguments? }
 
-Arguments { "{" text "}" }
+Options { "[" text? "]" }
+
+Arguments { "{" text? "}" }
+
+Math { "$" (text | Command)? "$" }
 
 @tokens {
   text { std.asciiLetter+ }
