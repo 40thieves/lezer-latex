@@ -10,8 +10,8 @@
     "mocha": "^6.2.2"
   },
   "scripts": {
-    "build": "mkdir -p dist && lezer-generator src/latex.grammar -o dist/latex.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir -p dist && lezer-generator src/latex.grammar -o dist/latex.js --cjs",
+    "test": "npm run build && mocha test/test-*.js"
   },
   "keywords": [],
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",

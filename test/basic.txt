@@ -1,0 +1,63 @@
+# Text
+
+foo
+
+==>
+
+LaTeX()
+
+# Plain command
+
+\a
+
+==>
+
+LaTeX(Command)
+
+# Command, empty arguments
+
+\a{}
+
+==>
+
+LaTeX(Command(Arguments))
+
+# Command, filled arguments
+
+\a{foo}
+
+==>
+
+LaTeX(Command(Arguments))
+
+# Command, empty options, empty arguments
+
+\a[]{}
+
+==>
+
+LaTeX(Command(Options,Arguments))
+
+# Command, filled arguments, empty arguments
+
+\a[foo]{}
+
+==>
+
+LaTeX(Command(Options,Arguments))
+
+# Math
+
+$foo$
+
+==>
+
+LaTeX(Math)
+
+# Math with command
+
+$\foo$
+
+==>
+
+LaTeX(Math(Command))
