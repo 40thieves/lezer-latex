@@ -1,8 +1,6 @@
-@top[name=LaTeX] { expression+ }
+@top[name=LaTeX] { (text | Command | Math)+ }
 
 @skip { space }
-
-expression { text | Command | Math }
 
 Command { "\\" text Options? Arguments? }
 
