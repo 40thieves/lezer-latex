@@ -3,8 +3,8 @@ name: CI
 on: [push]
 
 jobs:
-  build:
-    name: 'Build and Test'
+  test:
+    name: 'Test'
 
     runs-on: ubuntu-latest
 
@@ -15,10 +15,9 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - name: npm install, build, and test
+    - name: npm install and test
       run: |
         npm ci
-        npm run build
         npm test
       env:
         CI: true
