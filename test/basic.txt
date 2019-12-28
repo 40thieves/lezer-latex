@@ -6,9 +6,25 @@ foo
 
 LaTeX()
 
+# Text with spaces
+
+foo bar
+
+==>
+
+LaTeX()
+
 # Plain command
 
 \a
+
+==>
+
+LaTeX(Command)
+
+# Text with command
+
+foo\bar
 
 ==>
 
