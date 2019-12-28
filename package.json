@@ -11,7 +11,7 @@
   },
   "scripts": {
     "build": "mkdir -p dist && lezer-generator src/latex.grammar -o dist/latex.js --cjs",
-    "test": "npm run build && mocha test/test-*.js"
+    "test": "npm run build && mocha"
   },
   "keywords": [],
   "author": "Alasdair Smith <ali@alasdairsmith.co.uk>",
