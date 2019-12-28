@@ -1,4 +1,6 @@
-@top[name=LaTeX] { expression }
+@top[name=LaTeX] { expression+ }
+
+@skip { space }
 
 expression { text | Command | Math }
 
@@ -11,5 +13,7 @@ Arguments { "{" text? "}" }
 Math { "$" (text | Command)? "$" }
 
 @tokens {
-  text { (std.asciiLetter | std.whitespace)+ }
+  space { std.whitespace+ }
+
+  text { std.asciiLetter+ }
 }

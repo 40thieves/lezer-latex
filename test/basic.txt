@@ -22,13 +22,45 @@ LaTeX()
 
 LaTeX(Command)
 
-# Text with command
+# Text followed by command
 
 foo\bar
 
 ==>
 
 LaTeX(Command)
+
+# Text followed followed by command with whitespace
+
+foo \baz
+
+==>
+
+LaTeX(Command)
+
+# Command followed by text
+
+\foo baz
+
+==>
+
+LaTeX(Command)
+
+# 2 commands
+
+\foo\bar
+
+==>
+
+LaTeX(Command,Command)
+
+# 2 commands with whitespace
+
+\foo \bar
+
+==>
+
+LaTeX(Command,Command)
 
 # Command, empty arguments
 
