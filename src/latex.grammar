@@ -11,5 +11,5 @@ Arguments { "{" text? "}" }
 Math { "$" (text | Command)? "$" }
 
 @tokens {
-  text { std.asciiLetter+ }
+  text { (std.asciiLetter | std.whitespace)+ }
 }
