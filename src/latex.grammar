@@ -1,8 +1,15 @@
-@top[name=LaTeX] { (text | Command | Math)+ }
+@top[name=LaTeX] { (text | command | Math)+ }
 
 @skip { space }
 
-Command { "\\" text Options? Arguments? }
+command {
+  BeginCommand |
+  Command
+}
+
+Command { backslash text Options? Arguments? }
+
+BeginCommand { backslash @specialize<text, "begin"> Options? Arguments }
 
 Options { "[" text? "]" }
 
@@ -13,5 +20,6 @@ Math { "$" (text | Command)? "$" }
 @tokens {
   space { std.whitespace+ }
 
+  backslash { "\\" }
   text { std.asciiLetter+ }
 }

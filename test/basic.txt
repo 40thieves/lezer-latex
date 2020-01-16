@@ -94,6 +94,14 @@ LaTeX(Command(Options,Arguments))
 
 LaTeX(Command(Options,Arguments))
 
+# Begin Command
+
+\begin{}
+
+==>
+
+LaTeX(BeginCommand(Arguments))
+
 # Math
 
 $foo$
