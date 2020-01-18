@@ -94,13 +94,21 @@ LaTeX(Command(Options,Arguments))
 
 LaTeX(Command(Options,Arguments))
 
-# Begin Command
+# Begin Command without environment treated as regular command
 
 \begin{}
 
 ==>
 
-LaTeX(BeginCommand(Arguments))
+LaTeX(Command(Arguments))
+
+# Begin Command with environment
+
+\begin{foo}
+
+==>
+
+LaTeX(BeginCommand(Environment))
 
 # Math
 
