@@ -10,14 +10,14 @@ command {
 
 Command { backslash text Options? Arguments? }
 
-BeginCommand { backslash @extend<text, "begin"> Options? Environment }
-EndCommand { backslash @extend<text, "end"> Options? Environment }
+BeginCommand { backslash @extend<text, "begin"> Options? EnvironmentName }
+EndCommand { backslash @extend<text, "end"> Options? EnvironmentName }
 
 Options { "[" text? "]" }
 
 Arguments { "{" text? "}" }
 
-Environment { "{" text "}" }
+EnvironmentName { "{" text "}" }
 
 Math { "$" (text | Command)? "$" }
 

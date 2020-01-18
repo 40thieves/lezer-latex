@@ -94,7 +94,7 @@ LaTeX(Command(Options,Arguments))
 
 LaTeX(Command(Options,Arguments))
 
-# Begin Command without environment treated as regular command
+# Begin Command without environment name treated as regular command
 
 \begin{}
 
@@ -102,15 +102,15 @@ LaTeX(Command(Options,Arguments))
 
 LaTeX(Command(Arguments))
 
-# Begin Command with environment
+# Begin Command with environment name
 
 \begin{foo}
 
 ==>
 
-LaTeX(BeginCommand(Environment))
+LaTeX(BeginCommand(EnvironmentName))
 
-# End Command without environment treated as regular command
+# End Command without environment name treated as regular command
 
 \env{}
 
@@ -118,13 +118,13 @@ LaTeX(BeginCommand(Environment))
 
 LaTeX(Command(Arguments))
 
-# End Command with environment
+# End Command with environment name
 
 \end{foo}
 
 ==>
 
-LaTeX(EndCommand(Environment))
+LaTeX(EndCommand(EnvironmentName))
 
 # Math
 
