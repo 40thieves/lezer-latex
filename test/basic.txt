@@ -110,6 +110,22 @@ LaTeX(Command(Arguments))
 
 LaTeX(BeginCommand(Environment))
 
+# End Command without environment treated as regular command
+
+\env{}
+
+==>
+
+LaTeX(Command(Arguments))
+
+# End Command with environment
+
+\end{foo}
+
+==>
+
+LaTeX(EndCommand(Environment))
+
 # Math
 
 $foo$

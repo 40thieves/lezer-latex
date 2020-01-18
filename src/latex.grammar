@@ -4,6 +4,7 @@
 
 command {
   BeginCommand |
+  EndCommand |
   Command
 }
 
