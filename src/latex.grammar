@@ -1,17 +1,12 @@
-@top[name=LaTeX] { (text | command | Math)+ }
+@top[name=LaTeX] { (text | Command | Environment | Math)+ }
 
 @skip { space }
 
-command {
-  BeginCommand |
-  EndCommand |
-  Command
-}
-
 Command { backslash text Options? Arguments? }
 
-BeginCommand { backslash @extend<text, "begin"> Options? EnvironmentName }
-EndCommand { backslash @extend<text, "end"> Options? EnvironmentName }
+Environment { BeginCommand<Arguments> text? EndCommand<Arguments> }
+BeginCommand<envName> { backslash @extend<text, "begin"> Options? envName }
+EndCommand<envName> { backslash @extend<text, "end"> Options? envName }
 
 Options { "[" text? "]" }
 

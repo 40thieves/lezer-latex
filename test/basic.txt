@@ -94,37 +94,21 @@ LaTeX(Command(Options,Arguments))
 
 LaTeX(Command(Options,Arguments))
 
-# Begin Command without environment name treated as regular command
+# Environment
 
-\begin{}
-
-==>
-
-LaTeX(Command(Arguments))
-
-# Begin Command with environment name
-
-\begin{foo}
+\begin{foo}bar\end{foo}
 
 ==>
 
-LaTeX(BeginCommand(EnvironmentName))
+LaTeX(Environment(BeginCommand(Arguments),EndCommand(Arguments)))
 
-# End Command without environment name treated as regular command
+# Environment with mismatch
 
-\env{}
-
-==>
-
-LaTeX(Command(Arguments))
-
-# End Command with environment name
-
-\end{foo}
+\begin{foo}bar\end{baz}
 
 ==>
 
-LaTeX(EndCommand(EnvironmentName))
+LaTeX(Environment(BeginCommand(Arguments),EndCommand(Arguments)))
 
 # Math
 
