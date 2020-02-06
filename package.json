@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "lezer-generator": "^0.5.1"
+    "lezer-generator": "^0.8.0"
   },
   "devDependencies": {
     "mocha": "^6.2.2"
