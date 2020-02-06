@@ -7,10 +7,13 @@
     "lezer-generator": "^0.8.0"
   },
   "devDependencies": {
-    "mocha": "^6.2.2"
+    "mocha": "^6.2.2",
+    "rollup": "^1.31.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
   },
   "scripts": {
-    "build": "mkdir -p dist && lezer-generator src/latex.grammar -o dist/latex.js --cjs",
+    "build": "lezer-generator src/latex.grammar -o src/parser && rollup -c",
+    "build-debug": "lezer-generator src/latex.grammar --names -o src/parser && rollup -c",
     "test": "npm run build && mocha"
   },
   "keywords": [],
