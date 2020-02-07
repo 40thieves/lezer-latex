@@ -102,6 +102,14 @@ LaTeX(Command(Options,Arguments))
 
 LaTeX(Environment(BeginCommand(Arguments),EndCommand(Arguments)))
 
+# Environment with spaces
+
+\begin{foo}bar baz\end{foo}
+
+==>
+
+LaTeX(Environment(BeginCommand(Arguments),EndCommand(Arguments)))
+
 # Environment with mismatch
 
 \begin{foo}bar\end{baz}
