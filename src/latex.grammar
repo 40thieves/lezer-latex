@@ -12,8 +12,6 @@ Options { "[" text? "]" }
 
 Arguments { "{" text? "}" }
 
-EnvironmentName { "{" text "}" }
-
 Math { "$" (text | Command)? "$" }
 
 @tokens {
