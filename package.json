@@ -7,7 +7,7 @@
     "lezer-generator": "^0.8.0"
   },
   "devDependencies": {
-    "mocha": "^6.2.2"
+    "mocha": "^10.2.0"
   },
   "scripts": {
     "build": "mkdir -p dist && lezer-generator src/latex.grammar -o dist/latex.js --cjs",
